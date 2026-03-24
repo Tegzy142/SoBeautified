@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Audit — So Beautified Lagos</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#FAFAFA;color:#1A1A1A;line-height:1.7}
+.wrapper{max-width:860px;margin:0 auto;padding:60px 32px}
+
+/* HEADER */
+.header{background:#1A1A1A;color:white;padding:48px 32px;border-radius:16px;margin-bottom:40px;position:relative;overflow:hidden}
+.header::after{content:'AUDIT';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-size:7rem;font-weight:700;color:rgba(255,255,255,.04);letter-spacing:4px;pointer-events:none}
+.header-tag{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:#C9A96E;margin-bottom:12px;font-weight:600}
+.header h1{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;line-height:1.2;margin-bottom:8px}
+.header p{font-size:.9rem;color:rgba(255,255,255,.55);font-weight:300}
+.header-meta{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap}
+.meta-item{font-size:.75rem;color:rgba(255,255,255,.5)}
+.meta-item span{display:block;font-size:.9rem;color:white;font-weight:500;margin-top:2px}
+
+/* SUMMARY CARDS */
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+.sum-card{background:white;border-radius:12px;padding:24px;border:1px solid #EEEEEE;text-align:center}
+.sum-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;margin-bottom:4px}
+.sum-num.red{color:#E53935}
+.sum-num.amber{color:#F59E0B}
+.sum-num.green{color:#16A34A}
+.sum-label{font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:#888;font-weight:500}
+
+/* SECTION */
+.section{background:white;border-radius:16px;border:1px solid #EEEEEE;margin-bottom:24px;overflow:hidden}
+.section-header{padding:20px 28px;border-bottom:1px solid #EEEEEE;display:flex;align-items:center;gap:14px}
+.section-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.icon-red{background:#FEE2E2}
+.icon-amber{background:#FEF3C7}
+.icon-green{background:#DCFCE7}
+.icon-blue{background:#DBEAFE}
+.section-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600}
+.section-subtitle{font-size:.75rem;color:#888;margin-top:2px}
+.badge{font-size:.58rem;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:50px;font-weight:600;margin-left:auto}
+.badge-red{background:#FEE2E2;color:#B91C1C}
+.badge-amber{background:#FEF3C7;color:#92400E}
+.badge-blue{background:#DBEAFE;color:#1D4ED8}
+
+/* ISSUES */
+.issues{padding:8px 0}
+.issue{padding:16px 28px;border-bottom:1px solid #F5F5F5;display:flex;gap:14px;align-items:flex-start}
+.issue:last-child{border-bottom:none}
+.issue-num{width:24px;height:24px;border-radius:50%;font-size:.65rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.num-red{background:#FEE2E2;color:#B91C1C}
+.num-amber{background:#FEF3C7;color:#92400E}
+.num-blue{background:#DBEAFE;color:#1D4ED8}
+.issue-body{}
+.issue-title{font-size:.88rem;font-weight:600;color:#1A1A1A;margin-bottom:4px}
+.issue-desc{font-size:.82rem;color:#666;line-height:1.65;font-weight:300}
+.issue-fix{display:inline-block;margin-top:6px;font-size:.72rem;color:#16A34A;font-weight:600;background:#DCFCE7;padding:3px 10px;border-radius:50px}
+
+/* FOOTER */
+.footer{background:#1A1A1A;border-radius:16px;padding:36px;color:white;margin-top:40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-left h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;margin-bottom:6px}
+.footer-left p{font-size:.82rem;color:rgba(255,255,255,.5);font-weight:300}
+.footer-right{text-align:right}
+.footer-right p{font-size:.75rem;color:rgba(255,255,255,.4)}
+.footer-right strong{display:block;font-size:.9rem;color:#C9A96E;margin-top:4px}
+
+@media(max-width:600px){
+  .summary{grid-template-columns:1fr 1fr}
+  .header h1{font-size:1.6rem}
+  .footer{flex-direction:column;text-align:center}
+  .footer-right{text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-tag">Website Audit Report</div>
+    <h1>So Beautified Lagos<br>Site Review</h1>
+    <p>sobeautifiedlagos.com — Full audit of design, content, functionality and user experience</p>
+    <div class="header-meta">
+      <div class="meta-item">Date<span>March 24, 2026</span></div>
+      <div class="meta-item">Platform<span>Shopify</span></div>
+      <div class="meta-item">Issues Found<span>15 Issues</span></div>
+      <div class="meta-item">Priority<span>High</span></div>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary">
+    <div class="sum-card">
+      <div class="sum-num red">7</div>
+      <div class="sum-label">Critical Issues</div>
+    </div>
+    <div class="sum-card">
+      <div class="sum-num amber">5</div>
+      <div class="sum-label">Design Issues</div>
+    </div>
+    <div class="sum-card">
+      <div class="sum-num blue">3</div>
+      <div class="sum-label">Content Issues</div>
+    </div>
+  </div>
+
+  <!-- CRITICAL -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-red">🔴</div>
+      <div>
+        <div class="section-title">Critical Issues</div>
+        <div class="section-subtitle">These are actively costing you clients and money right now</div>
+      </div>
+      <div class="badge badge-red">Fix Immediately</div>
+    </div>
+    <div class="issues">
+      <div class="issue">
+        <div class="issue-num num-red">1</div>
+        <div class="issue-body">
+          <div class="issue-title">All product prices show ₦19.99</div>
+          <div class="issue-desc">Every product — Detangling Brush, Lush Glam Braids, Olaplex No.7, Wigs — is showing ₦19.99. These are clearly default placeholder prices that were never updated. Any client who visits the shop and sees this will either lose trust or try to purchase at the wrong price.</div>
+          <span class="issue-fix">Fix: Update all product prices immediately in Shopify admin</span>
+        </div>
+      </div>
+      <div class="issue">
+        <div class="issue-num num-red">2</div>
+        <div class="issue-body">
+          <div class="issue-title">Search bar shows lorem ipsum placeholder text</div>
+          <div class="issue-desc">When a visitor opens the search bar, the "Trending Now" section shows dummy words: "dempus", "magnis", "loremous saliduar", "naminos", "dinterdum". These are default Shopify template placeholders that were never removed. This looks broken and deeply unprofessional.</div>
+          <span class="issue-fix">Fix: Remove or replace trending search terms in theme settings</span>
+        </div>
+      </div>
+      <div class="issue">
+        <div class="issue-num num-red">3</div>
+        <div class="issue-body">
+          <div class="issue-title">Hero section has no text, headline or call to action</div>
+          <div class="issue-desc">The homepage hero is just a large image with no headline, no tagline, and no button. The first thing a visitor sees tells them nothing about the brand. You have 3–5 seconds to capture attention — a blank hero wastes all of it.</div>
+          <span class="issue-fix">Fix: Add a strong headline, short tagline, and "Book Now" button to the hero</span>
+        </div>
+      </div>
+      <div class="issue">
+        <div class="issue-num num-red">4</div>
+        <div class="issue-body">
+          <div class="issue-title">All footer social media links are dead</div>
+          <div class="issue-desc">Facebook, Instagram, Tumblr, and Twitter links in the footer all point to "#" — meaning they go nowhere. A client who wants to follow the brand on Instagram clicks and nothing happens. This is a missed opportunity on every page visit.</div>
+          <span class="issue-fix">Fix: Add real social media URLs to all footer links</span>
+        </div>
+      </div>
+      <div class="issue">
+        <div class="issue-num num-red">5</div>
+        <div class="issue-body">
+          <div class="issue-title">Hammam nav link goes to the Gallery page</div>
+          <div class="issue-desc">Under "Our Services" in the navigation, clicking "Hammam" takes the visitor to the Gallery page — not a Hammam service page. This is a broken link that will confuse anyone interested in booking a Hammam service.</div>
+          <span class="issue-fix">Fix: Update the Hammam nav link to point to the correct service page</span>
+        </div>
+      </div>
+      <div class="issue">
+        <div class="issue-num num-red">6</div>
+        <div class="issue-body">
+          <div class="issue-title">Google Maps embed has a third-party watermark</div>
+          <div class="issue-desc">The map on the site shows a visible "Embed Map on Website for Free — norsumediagroup.com" link. This is another brand's advertisement appearing on your site. It looks unfinished and cheapens the premium image the brand is going for.</div>
+          <span class="issue-fix">Fix: Replace with a proper Google Maps embed without third-party branding</span>
+        </div>
+      </div>
+      <div class="issue">
+        <div class="issue-num num-red">7</div>
+        <div class="issue-body">
+          <div class="issue-title">Copyright year shows 2022</div>
+          <div class="issue-desc">The footer copyright reads "Copyright © 2022". It is now 2026. A site showing a 4-year-old copyright date looks abandoned and outdated — this erodes trust, especially for new visitors.</div>
+          <span class="issue-fix">Fix: Update copyright year to 2026 in footer settings</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESIGN -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-amber">🟡</div>
+      <div>
+        <div class="section-title">Design Issues</div>
+        <div class="section-subtitle">These affect how professional and premium the brand looks</div>
+      </div>
+      <div class="badge badge-amber">Important</div>
+    </div>
+    <div class="issues">
+      <div class="issue">
+        <div class="issue-num num-amber">8</div>
+        <div class="issue-body">
+          <div class="issue-title">Hero image is oversized on desktop</div>
+          <div class="issue-desc">On larger screens the hero image is zoomed in too much — it fills the entire viewport with no breathing room and no context. It feels heavy and unbalanced compared to what a premium salon site should feel like.</div>
+          <span class="issue-fix">Fix: Adjust hero image height and position to show more of the image at a comfortable scale</span>
+        </div>
+      </div>
+      <div class="issue">
+        <div class="issue-num num-amber">9</div>
+        <div class="issue-body">
+          <div class="issue-title">Announcement bar at the top should be removed</div>
+          <div class="issue-desc">The purple/mauve announcement bar saying "Timeless Beauty. Personalised Touch. Welcome to So Beautified Lagos" feels outdated. It takes up valuable space and the "NG" country tag appears next to it unnecessarily, looking like a bug.</div>
+          <span class="issue-fix">Fix: Remove the announcement bar or redesign it to be more minimal</span>
+        </div>
+      </div>
+      <div class="issue">
+        <div class="issue-num num-amber">10</div>
+        <div class="issue-body">
+          <div class="issue-title">About section body text is center-aligned</div>
+          <div class="issue-desc">The paragraph text under "THE BEST BEAUTY SALON IN LAGOS" is centered. Long centered paragraphs are harder to read — research consistently shows left-aligned text is more readable for body copy. This reduces the professionalism of the section.</div>
+          <span class="issue-fix">Fix: Change body paragraph text alignment to left</span>
+        </div>
+      </div>
+      <div class="issue">
+        <div class="issue-num num-amber">11</div>
+        <div class="issue-body">
+          <div class="issue-title">Service cards use circular images — feels dated</div>
+          <div class="issue-desc">The circular image style for service cards (Braiding, Waxing, Facials, Nails) was popular in 2018–2020 but now looks outdated. Modern salon sites use full rectangular or square image cards with clean overlays. The current design undersells the quality of the services.</div>
+          <span class="issue-fix">Fix: Replace circular image cards with full rectangular cards with proper image coverage</span>
+        </div>
+      </div>
+      <div class="issue">
+        <div class="issue-num num-amber">12</div>
+        <div class="issue-body">
+          <div class="issue-title">Individual service pages use a small circular image on one side</div>
+          <div class="issue-desc">On service detail pages (e.g. Facials), the image appears as a small circle on the left with text beside it. The text below the image also feels disconnected and the content describes a body treatment under the Facials page — wrong description. The layout needs to be redesigned with a full-width hero image and properly written service content.</div>
+          <span class="issue-fix">Fix: Redesign service pages with full-width imagery and correct content per service</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-blue">🔵</div>
+      <div>
+        <div class="section-title">Content Issues</div>
+        <div class="section-subtitle">These affect trust, clarity and conversion</div>
+      </div>
+      <div class="badge badge-blue">Should Fix</div>
+    </div>
+    <div class="issues">
+      <div class="issue">
+        <div class="issue-num num-blue">13</div>
+        <div class="issue-body">
+          <div class="issue-title">Facials page has the wrong service description</div>
+          <div class="issue-desc">The Facials page body text reads "Our warming body service is designed to exfoliate, open the pores..." — this is a body/Hammam description, not a facials description. Wrong content on a service page will confuse potential clients and damage credibility.</div>
+          <span class="issue-fix">Fix: Write and upload correct content specific to facial treatments</span>
+        </div>
+      </div>
+      <div class="issue">
+        <div class="issue-num num-blue">14</div>
+        <div class="issue-body">
+          <div class="issue-title">No pricing information anywhere on the site</div>
+          <div class="issue-desc">None of the service pages mention pricing ranges. Clients who don't know what to expect will either not book or go to a competitor who is more transparent. Even "Starting from ₦X,000" creates trust and reduces the back-and-forth inquiry messages.</div>
+          <span class="issue-fix">Fix: Add price ranges or "from" pricing to each service page</span>
+        </div>
+      </div>
+      <div class="issue">
+        <div class="issue-num num-blue">15</div>
+        <div class="issue-body">
+          <div class="issue-title">Book Now and Contact Us go to the same page</div>
+          <div class="issue-desc">"Book Now" and "Contact Us" in the navigation both link to the same Contact page. These should serve different purposes — booking should go to a dedicated booking form or system, while contact is for general enquiries. Having them merged creates confusion about what action to take.</div>
+          <span class="issue-fix">Fix: Separate the booking flow from the general contact page</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">
+      <h3>Next Steps</h3>
+      <p>Start with the 7 critical issues — these are losing you clients today.<br>The design and content fixes can be addressed in order of priority after.</p>
+    </div>
+    <div class="footer-right">
+      <p>Audit prepared by</p>
+      <strong>Samuel Tegzy · Web Developer</strong>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
